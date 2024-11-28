@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customized Test Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <h1 class="brand">TestGen <i class="fa-solid fa-lightbulb"></i></h1>
+            <ul class="nav-links">
+                <li><a href="#" id="navSignup">Sign Up</a></li>
+                <li><a href="#" id="navSignin">Sign In</a></li>
+                <li class="hidden" id="navGenerate"><a href="#">Generate Test</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <header class="hero">
+        <h1>Customized Test Generator</h1>
+        <p>Generate tests tailored to your notes and improve your learning experience.</p>
+    </header>
+
+    <!-- Authentication Section -->
+    <section id="authSection">
+        <!-- Sign Up Form -->
+        <div id="signupForm" class="auth-section">
+            <h2>Sign Up</h2>
+            <div class="auth-form">
+                <input type="email" id="signupEmail" placeholder="Email" required>
+                <input type="password" id="signupPassword" placeholder="Password" required>
+                <button type="button" id="signupBtn">Sign Up</button>
+                <span id="switchToSignin">Already have an account? Sign In</span>
+            </div>
+        </div>
+
+        <!-- Sign In Form -->
+        <div id="signinForm" class="auth-section hidden">
+            <h2>Sign In</h2>
+            <div class="auth-form">
+                <input type="email" id="signinEmail" placeholder="Email" required>
+                <input type="password" id="signinPassword" placeholder="Password" required>
+                <button type="button" id="signinBtn">Sign In</button>
+                <span id="switchToSignup">Don't have an account? Sign Up</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Application -->
+    <section id="mainApp" class="hidden">
+        <div class="test-section">
+            <textarea id="notesInput" placeholder="Enter your notes here..." rows="5"></textarea>
+            <button id="generateBtn">Generate Test</button>
+        </div>
+
+        <!-- Test Questions -->
+        <div id="testSection" class="test-section hidden">
+            <form id="testForm"></form>
+            <button id="submitBtn">Submit Test</button>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="results-section hidden">
+            <p id="score"></p>
+            <button id="retryBtn" class="hidden">Retry</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+        <p>&copy; 2024 Customized Test Generator</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
